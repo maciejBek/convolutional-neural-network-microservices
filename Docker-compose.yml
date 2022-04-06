@@ -5,6 +5,12 @@ services:
         ports:
             - "3000:3000"
         depends_on:
+            - api
+    api:
+        build: ./backend/api
+        ports:
+            - "8080:8080"
+        depends_on:
             - convolution
     convolution:
         build: ./backend/convolution
@@ -30,6 +36,13 @@ services:
         build: ./backend/neural-network
         ports:
             - "5003:5000"
+        depends_on:
+            - data-access-persistance
+        stdin_open: true
+    data-access-persistance:
+        build: ./backend/data-access-persistance
+        ports:
+            - "8081:8080"
         depends_on:
             - mongodb
         stdin_open: true
