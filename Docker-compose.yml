@@ -1,0 +1,43 @@
+version: '3'
+services:
+    frontend:
+        build: ./frontend
+        ports:
+            - "3000:3000"
+        depends_on:
+            - convolution
+    convolution:
+        build: ./backend/convolution
+        ports:
+            - "5000:5000"
+        depends_on:
+            - pool
+    pool:
+        build: ./backend/pool
+        ports:
+            - "5001:5000"
+        depends_on:
+            - fully-connection
+        stdin_open: true
+    fully-connection:
+        build: ./backend/fully-connection
+        ports:
+            - "5002:5000"
+        depends_on:
+            - neural-network
+        stdin_open: true
+    neural-network:
+        build: ./backend/neural-network
+        ports:
+            - "5003:5000"
+        depends_on:
+            - mongodb
+        stdin_open: true
+    mongodb:
+        image: mongo
+        restart: always
+        ports:
+            - "27017:27017"
+        environment:
+            MONGO_INITDB_ROOT_USERNAME: username
+            MONGO_INITDB_ROOT_PASSWORD: password
