@@ -7,6 +7,38 @@
   pointer-events: none;
 }
 
+#Photo{
+  margin: auto;
+  margin-top: 10%;
+  width: 600px;
+  height: 450px;
+  background-color: rgba(0, 0, 0, 0.5) ;
+  border-radius: 7px;
+  box-shadow: 0px 0px 10em black;
+}
+
+#Img{
+  margin-top: 20px;
+  width: 300px;
+  height: 300px;
+}
+
+#Form{
+  margin-top: 20px;
+}
+
+#Ans1{
+  margin: auto;
+  width: 250px;
+  margin-top: 40px;
+  font-size: 20px;
+}
+
+#Ans2{
+  color: #FFD70B;
+  float: right;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
