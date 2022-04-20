@@ -16,6 +16,7 @@ const Photo = () => {
         data: formData,
         headers: { "Content-Type": "multipart/form-data" },
       });
+      console.log(response)
     } catch(error) {
       console.log(error)
     }
