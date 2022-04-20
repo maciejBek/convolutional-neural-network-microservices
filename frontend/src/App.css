@@ -1,3 +1,7 @@
+body{
+  background-color: #686A6C;
+}
+
 .App {
   text-align: center;
 }
@@ -9,7 +13,7 @@
 
 #Photo{
   margin: auto;
-  margin-top: 10%;
+  margin-top: 12%;
   width: 600px;
   height: 450px;
   background-color: rgba(0, 0, 0, 0.5) ;
@@ -37,6 +41,43 @@
 #Ans2{
   color: #FFD70B;
   float: right;
+}
+
+#Button2{
+  background-color: #FFD70B;
+  border: 0px;
+  height: 25px;
+  width: 100px;
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+#Button2:hover{
+  background-color: #FFF20B;
+  border: 0px;
+  height: 25px;
+  width: 100px;
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+input[type=file]::file-selector-button {
+  margin-right: 20px;
+  background-color: #FFD70B;
+  border: 0px;
+  height: 25px;
+  width: 100px;
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+input[type=file]::file-selector-button:hover {
+  background-color: #FFF20B;
+  border: 0px;
+  height: 25px;
+  width: 100px;
+  border-radius: 5px;
+  font-size: 15px;
 }
 
 @media (prefers-reduced-motion: no-preference) {

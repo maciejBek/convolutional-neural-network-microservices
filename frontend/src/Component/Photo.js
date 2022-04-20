@@ -51,7 +51,7 @@ const Photo = () => {
       <img id="Img" src={img} alt="" />
       <form id="Form" onSubmit={handleSubmit}>
         <input type="file" onChange={handleFileSelect}/>
-        <input type="submit" value="Wyślij plik" />
+        <input id="Button2" type="submit" value="Wyślij plik" />
       </form>
       <div id="Ans1">Na zdjęciu wykryto: <div id="Ans2">{statephoto}</div></div>
     </div>
