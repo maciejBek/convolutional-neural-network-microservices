@@ -9,18 +9,23 @@ const Photo = () => {
     event.preventDefault()
     const formData = new FormData();
     formData.append("image", selectedFile);
-    try {
-      const response = axios({
-        method: "post",
-        url: "http://192.168.0.178:5000/images",
-        data: formData,
-        headers: { "Content-Type": "multipart/form-data" },
+
+    axios({
+      method: "post",
+      url: "http://192.168.1.102:5000/images",
+      data: formData,
+      headers: { "Content-Type": "multipart/form-data" },
+    })
+      .then(function (response) {
+          //handle success
+          console.log(response)
+          console.log(response.data.object)
+      })
+      .catch(function (response) {
+          //handle error
+          console.log(response);
       });
-      console.log(response)
-      console.log(response.body.data)
-    } catch(error) {
-      console.log(error)
-    }
+
   }
 
   const handleFileSelect = (event) => {
