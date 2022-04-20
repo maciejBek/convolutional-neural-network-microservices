@@ -5,11 +5,11 @@ services:
         ports:
             - "3000:3000"
         depends_on:
-            - api
-    api:
-        build: ./backend/api
+            - image-processing
+    image-processing:
+        build: ./backend/image-processing
         ports:
-            - "8080:8080"
+            - "4999:5000"
         depends_on:
             - convolution
     convolution:
