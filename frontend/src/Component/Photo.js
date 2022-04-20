@@ -8,7 +8,7 @@ const Photo = () => {
   const handleSubmit = (event) => {
     event.preventDefault()
     const formData = new FormData();
-    formData.append("selectedFile", selectedFile);
+    formData.append("image", selectedFile);
     try {
       const response = axios({
         method: "post",
