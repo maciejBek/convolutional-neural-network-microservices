@@ -16,7 +16,7 @@ const Photo = () => {
         data: formData,
         headers: { "Content-Type": "multipart/form-data" },
       });
-      console.log(response)
+      console.log(response.data.object)
     } catch(error) {
       console.log(error)
     }
@@ -29,7 +29,7 @@ const Photo = () => {
   return (
     <form onSubmit={handleSubmit}>
       <input type="file" onChange={handleFileSelect}/>
-      <input type="submit" value="Upload File" />
+      <input type="submit" value="Wyślij plik" />
     </form>
   )
 };
